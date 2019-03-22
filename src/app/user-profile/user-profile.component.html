@@ -1,0 +1,21 @@
+<div class="row">
+<div style="float:right">
+    <input type="button" (click)="onLogout()" value="Logout" />
+</div>
+</div>
+<table *ngIf="blog_posts" class="table-fill">
+  <thead>
+      <tr>
+        <th>#</th>  
+        <th  class="text-center">Published</th>
+        <th  class="text-center">Title</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let post of blog_posts; let i = index">
+          <td>{{i}}</td>
+          <td>{{post.published}}</td>
+          <td>{{post.title}}</td>
+      </tr>
+  </tbody>
+</table>
